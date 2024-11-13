@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get$tyled</title>
     <link rel="stylesheet" href="../css/closet.css">
+  <title>Get$tyled</title>
 </head>
 <body>
     <div class="header">
@@ -16,38 +16,94 @@
             <a href="#">Account</a>
         </div>
     </div>
-
-    <div class="outfit-grid">
-        <!-- Row 1 -->
-        <div class="item">
-            <button class="nav-btn">&lt;</button>
-            <img src="hat.jpg" alt="Hat">
-            <button class="nav-btn">&gt;</button>
+    <div class="container">
+    <!-- Repeat this row structure for each clothing category -->
+    <div class="row">
+      <div class="arrow" onclick="moveLeft(0)">&#8592;</div>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-0">
+          <div class="carousel-item"><img src="../static/gray-tshirt.jpg" alt="Hat 1" width="80"></div>
+          <div class="carousel-item"><img src="../static/green-tshirt.jpg" alt="Hat 2" width="80"></div>
+          <div class="carousel-item"><img src="../static/red-tshirt.jpg" alt="Hat 3" width="80"></div>
         </div>
-        <div class="item">
-            <img src="sunglasses.jpg" alt="Sunglasses" class="highlight">
-        </div>
-        
-        <!-- Row 2 -->
-        <div class="item">
-            <button class="nav-btn">&lt;</button>
-            <img src="grey-shirt.jpg" alt="Grey T-shirt">
-            <button class="nav-btn">&gt;</button>
-        </div>
-        <div class="item">
-            <img src="black-shirt.jpg" alt="Black T-shirt" class="highlight">
-        </div>
-        
-        <!-- Row 3 -->
-        <div class="item">
-            <button class="nav-btn">&lt;</button>
-            <img src="pants.jpg" alt="Pants">
-            <button class="nav-btn">&gt;</button>
-        </div>
-        <div class="item">
-            <img src="jeans.jpg" alt="Jeans" class="highlight">
-        </div>
+      </div>
+      <div class="arrow" onclick="moveRight(0)">&#8594;</div>
     </div>
+
+    <div class="row">
+      <div class="arrow" onclick="moveLeft(1)">&#8592;</div>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-1">
+          <div class="carousel-item"><img src="top1.jpg" alt="Top 1" width="80"></div>
+          <div class="carousel-item"><img src="top2.jpg" alt="Top 2" width="80"></div>
+          <div class="carousel-item"><img src="top3.jpg" alt="Top 3" width="80"></div>
+        </div>
+      </div>
+      <div class="arrow" onclick="moveRight(1)">&#8594;</div>
+    </div>
+
+    <!-- Additional rows for other clothing categories (Bottoms, Shoes, etc.) -->
+  </div>
+
+  <script>
+    // Track current index for each carousel
+    const carouselPositions = [0, 0]; // Add more if there are more carousels
+    const itemWidth = 120; // Width of each item (including margins)
+
+    function moveLeft(carouselIndex) {
+      const track = document.getElementById(`carousel-${carouselIndex}`);
+      if (carouselPositions[carouselIndex] > 0) {
+        carouselPositions[carouselIndex]--;
+        updateMiddleItem(carouselIndex)
+        // track.style.transition = 'transform 0.3s ease-in-out';
+        track.style.transform = `translateX(-${carouselPositions[carouselIndex] * itemWidth}px)`;
+      }
+    }
+
+    function moveRight(carouselIndex) {
+      const track = document.getElementById(`carousel-${carouselIndex}`);
+      const itemCount = track.children.length;
+      if (carouselPositions[carouselIndex] < itemCount - 1) {
+        carouselPositions[carouselIndex]++;
+        updateMiddleItem(carouselIndex)
+        // track.style.transition = 'transform 0.3s ease-in-out';
+        track.style.transform = `translateX(-${carouselPositions[carouselIndex] * itemWidth}px)`;
+      }
+    }
+
+    document.querySelectorAll('.carousel-track').forEach(track => {
+        track.addEventListener('transitionend', () => {
+            updateMiddleItem(track);
+        });
+    });
+
+    // Update the middle item by adding a class
+    function updateMiddleItem(carouselIndex) {
+      const track = document.getElementById(`carousel-${carouselIndex}`);
+      const items = track.getElementsByClassName('carousel-item');
+      const middleIndex = Math.floor(items.length / 2); // Find the middle item index
+      const currentPosition = carouselPositions[carouselIndex];
+      const middleItemIndex = currentPosition + middleIndex;
+
+      // Remove class from all items
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove('middle-item');
+      }
+
+      // Add class to the current middle item
+      if (items[middleItemIndex]) {
+        items[middleItemIndex].classList.add('middle-item');
+      }
+    }
+
+
+    // Initialize by setting the middle item for each carousel
+    window.onload = function() {
+      updateMiddleItem(0);
+      updateMiddleItem(1);
+    }
+  </script>
 
 </body>
 </html>
+

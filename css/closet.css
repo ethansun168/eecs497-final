@@ -34,32 +34,53 @@ body {
     color: black;
 }
 
-.outfit-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    margin: 50px 100px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  position: relative; /* Position relative to place the border above */
+  width: 100%; /* Ensure row spans the full width */
 }
 
-img {
-    max-width: 100px;
-    max-height: 100px;
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  background-color: #ddd;
+  padding: 10px;
 }
 
-.nav-btn {
-    background: none;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
-.highlight {
-    border: 3px solid black;
-    padding: 5px;
+.carousel-item {
+  min-width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0 10px;
+  user-select: none;
+}
+
+.carousel .carousel-item.middle-item {
+  border: 3px solid black; /* Border above the middle item */
 }
