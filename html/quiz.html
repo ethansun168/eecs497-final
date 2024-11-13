@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get$tyled - Quiz</title>
+    <link rel="stylesheet" href="./css/quiz.css">
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <div class="header">
+        <h1>Get$tyled</h1>
+        <div class="menu">
+            <a href="#">Upload Image</a>
+            <a href="#">Closet</a>
+            <a href="#">Generate Outfit</a>
+            <a href="#">Account</a>
+        </div>
+    </div>
+
+    <!-- Quiz Content -->
+    <div class="quiz-container">
+        <h2>Personalize Your Style</h2>
+        <form id="styleForm" class="questionnaire-form">
+            <section class="quiz-question">
+                <h3>Your Style</h3>
+                <label for="stylePref">Preferred Style:</label>
+                <select id="stylePref" name="stylePref">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <option value="sporty">Sporty</option>
+                    <option value="vintage">Vintage</option>
+                </select>
+            </section>
+
+            <section class="quiz-question">
+                <h3>Weather Preferences</h3>
+                <label for="weather">Typical Weather:</label>
+                <select id="weather" name="weather">
+                    <option value="hot">Hot</option>
+                    <option value="cold">Cold</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="mixed">Mixed/Seasonal</option>
+                </select>
+            </section>
+
+            <section class="quiz-question">
+                <h3>Outfit Preferences</h3>
+                <label for="occasion">Preferred Occasion:</label>
+                <select id="occasion" name="occasion">
+                    <option value="work">Work</option>
+                    <option value="casual">Casual Outing</option>
+                    <option value="party">Party</option>
+                </select>
+            </section>
+
+            <button type="submit" class="nav-btn">Get Styled!</button>
+        </form>
+    </div>
+</body>
+</html>
