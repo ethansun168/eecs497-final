@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Info</title>
+    <link rel="stylesheet" href="../css/account.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Get$tyled</h1>
+      <div class="menu">
+        <a href="#">Upload Image</a>
+        <a href="#">Closet</a>
+        <a href="#">Generate Outfit</a>
+        <a href="#">Account</a>
+      </div>
+    </div>
+    <div class="account-info-container">
+      <h2>Account Info</h2>
+      <form class="account-form">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="[Name here]" disabled />
+        </div>
+        <div class="input-group">
+          <label for="dob">Date of Birth</label>
+          <input type="text" id="dob" placeholder="[XX/XX/XXXX]" disabled />
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" placeholder="[123-456-7890]" disabled />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="[abc@xyz.com]" disabled />
+        </div>
+        <div class="input-group">
+          <label for="total-clothes">Total Number of Clothes</label>
+          <input type="text" id="total-clothes" placeholder="[X]" disabled />
+        </div>
+        <div class="button-group">
+          <a href="signin.html">
+            <button type="button" class="signout-button">Sign Out</button>
+          </a>
+          <a>
+            <button type="button" class="edit-button">Edit Account Info</button>
+          </a>
+        </div>
+      </form>
+    </div>
+    <script src="../javascript/account.js" defer></script>
+  </body>
+</html>
