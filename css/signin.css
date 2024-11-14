@@ -28,7 +28,7 @@ h1 {
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
 }
 
 form {
@@ -40,6 +40,7 @@ label {
     margin-bottom: 8px;
     font-size: 1.1em;
     text-align: left;
+    color: black;
 }
 
 input {

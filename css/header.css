@@ -3,12 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+    background-image: url('../static/page_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Header Navigation Bar Styling */
@@ -19,6 +25,8 @@ body {
     padding: 20px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url('../static/header_background.jpeg');
+    color:white;
 }
 
 .header h1 {
@@ -34,7 +42,7 @@ body {
 .menu a {
     text-decoration: none;
     font-size: 1em;
-    color: black;
+    color: white;
     transition: color 0.3s ease;
 }
 
