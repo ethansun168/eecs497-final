@@ -16,7 +16,7 @@
 .carousel {
   display: flex;
   overflow: hidden;
-  width: 300px;
+  width: 370px;
   background-color: #ddd;
   padding: 10px;
 }
@@ -45,6 +45,19 @@
   user-select: none;
 }
 
-.carousel .carousel-item.middle-item {
-  border: 3px solid black; /* Border above the middle item */
+/* Style for the middle item */
+.middle-item {
+    outline: 3px solid black; /* Black box */
+    outline-offset: -2px;
+    transform: scale(1.05); /* Slightly larger to emphasize */
+    transition: transform 0.3s ease;
+}
+
+.title {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 2rem;
 }

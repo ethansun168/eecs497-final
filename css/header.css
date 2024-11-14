@@ -41,3 +41,7 @@ body {
 .menu a:hover {
     color: #555; /* Hover color for links */
 }
+
+a.active {
+    text-decoration: underline;
+}

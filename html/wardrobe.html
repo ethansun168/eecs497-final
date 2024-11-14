@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/wardrobe.css">
+  <title>Get$tyled</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Get$tyled</h1>
+        <div class="menu">
+            <a href="upload.html">Upload Image</a>
+            <a href="wardrobe.html" class="active">Wardrobe</a>
+            <a href="generate.html">Generate Outfit</a>
+            <a href="account.html">Account</a>
+        </div>
+    </div>
+
+    <div class="title">Your Wardrobe</div>
+
+    <div class="container">
+    <!-- Repeat this row structure for each clothing category -->
+    <div class="row">
+      <div class="arrow" onclick="moveLeft(0)">&#8592;</div>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-0">
+          <div class="carousel-item"><img src="../static/umich_hat.jpg" alt="umich_hat" width="80"></div>
+          <div class="carousel-item"><img src="../static/glasses.jpg" alt="glasses" width="80"></div>
+        </div>
+      </div>
+      <div class="arrow" onclick="moveRight(0)">&#8594;</div>
+    </div>
+
+    <div class="row">
+      <div class="arrow" onclick="moveLeft(1)">&#8592;</div>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-1">
+          <div class="carousel-item"><img src="../static/gray-tshirt.jpg" alt="gray-tshirt" width="80"></div>
+          <div class="carousel-item"><img src="../static/green-tshirt.jpg" alt="green-tshirt" width="80"></div>
+          <div class="carousel-item"><img src="../static/red-tshirt.jpg" alt="red-tshirt" width="80"></div>
+        </div>
+      </div>
+      <div class="arrow" onclick="moveRight(1)">&#8594;</div>
+    </div>
+
+    <div class="row">
+      <div class="arrow" onclick="moveLeft(2)">&#8592;</div>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-2">
+          <div class="carousel-item"><img src="../static/gray-tshirt.jpg" alt="gray-tshirt" width="80"></div>
+          <div class="carousel-item"><img src="../static/green-tshirt.jpg" alt="green-tshirt" width="80"></div>
+          <div class="carousel-item"><img src="../static/red-tshirt.jpg" alt="red-tshirt" width="80"></div>
+        </div>
+      </div>
+      <div class="arrow" onclick="moveRight(2)">&#8594;</div>
+    </div>
+
+    <div class="row">
+      <div class="arrow" onclick="moveLeft(3)">&#8592;</div>
+      <div class="carousel">
+        <div class="carousel-track" id="carousel-3">
+          <div class="carousel-item"><img src="../static/gray-tshirt.jpg" alt="gray-tshirt" width="80"></div>
+          <div class="carousel-item"><img src="../static/green-tshirt.jpg" alt="green-tshirt" width="80"></div>
+          <div class="carousel-item"><img src="../static/red-tshirt.jpg" alt="red-tshirt" width="80"></div>
+        </div>
+      </div>
+      <div class="arrow" onclick="moveRight(3)">&#8594;</div>
+    </div>
+    <!-- Additional rows for other clothing categories (Bottoms, Shoes, etc.) -->
+  </div>
+
+  <script src="../javascript/wardrobe.js" defer></script>
+
+</body>
+</html>
+
