@@ -23,11 +23,12 @@
     color: #333;
 }
 
-.quiz-question label, .quiz-question select {
+.quiz-question label, .quiz-question select, .quiz-question option{
     display: block;
     width: 100%;
     margin-top: 5px;
     font-size: 1em;
+    color: black;
 }
 
 /* Navigation Button Styling */

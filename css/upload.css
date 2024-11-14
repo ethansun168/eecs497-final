@@ -19,6 +19,10 @@
     align-items: center;
 }
 
+label span {
+    color: black;
+}
+
 /* Individual upload box styling */
 .upload-box {
     width: 150px;
