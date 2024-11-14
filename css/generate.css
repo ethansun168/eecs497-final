@@ -1,102 +1,21 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    position: relative; /* Position relative to place the border above */
-    width: 100%; /* Ensure row spans the full width */
-}
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    width: 300px;
-    background-color: #ddd;
-    padding: 10px;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100px;
-    height: 100px;
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.arrow {
+/* Default styles for buttons */
+.like-btn, .dislike-btn, .choose-btn {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-    font-size: 2rem;
-    padding: 0 10px;
-    user-select: none;
+    outline: none;
 }
-
-.carousel .carousel-item.middle-item {
-    border: 3px solid black; /* Border above the middle item */
+/* Active state style without color change */
+.like-btn.active, .dislike-btn.active {
+    outline: 2px solid #555; /* Subtle outline to indicate selection */
+    border-radius: 5px;
 }
-.upload-container {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-}
-
-.upload-container h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.upload-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-      gap: 10px; /* Adjust gap for vertical spacing */
-    justify-items: center;
-}
-
-.upload-box {
-    width: 150px;
-    height: 150px;
-    background-color: #e0e0e0;
-    position: relative;
-    border: 2px dashed #ccc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    text-align: center;
-      margin: 5px; /* Adjust margin to bring boxes closer horizontally */
-}
-
-.upload-box label:first-of-type {
-    position: absolute;
-    top: 10px;
-    font-weight: bold;
-    font-size: 1em;
-    color: #555;
-}
-
-.upload-box input[type="file"] {
-    display: none;
-}
-
-.plus-sign {
-    font-size: 2em;
-    color: #888;
-    cursor: pointer;
+/* Style for the feedback message */
+.feedback-message {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
 }
 
 .outfit-recommendation {
