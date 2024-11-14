@@ -1,0 +1,59 @@
+/* Container styling */
+.upload-container {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.upload-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Grid for upload boxes */
+.upload-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Individual upload box styling */
+.upload-box {
+    width: 150px;
+    height: 150px;
+    background-color: #f7f7f7;
+    position: relative;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for upload boxes */
+.upload-box:hover {
+    background-color: #e0e0e0;
+    border-color: #888;
+}
+
+/* Centered grey box for the plus sign */
+.plus-box {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    color: white;
+    font-size: 2em;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    pointer-events: none; /* So it doesn't interfere with the click */
+}
+
+/* Hide the file input */
+.upload-box input[type="file"] {
+    display: none;
+}

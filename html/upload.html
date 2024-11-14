@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Clothing</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/upload.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Upload Your Outfit</h1>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="upload.html" class="active">Upload Image</a>
+            <a href="closet.html">Closet</a>
+            <a href="generate.html">Generate Outfit</a>
+            <a href="account.html">Account</a>
+        </div>
+    </div>
+
+    <div class="upload-container">
+        <h2>Upload Items to Your Closet</h2>
+        <div class="upload-grid">
+            <!-- Accessories Upload Box -->
+            <div class="upload-box">
+                <label for="accessories-upload">Accessories</label>
+                <input type="file" id="accessories-upload" name="accessories" accept="image/*">
+                <label for="accessories-upload" class="plus-sign">+</label>
+            </div>
+            
+            <!-- Tops Upload Box -->
+            <div class="upload-box">
+                <label for="tops-upload">Tops</label>
+                <input type="file" id="tops-upload" name="tops" accept="image/*">
+                <label for="tops-upload" class="plus-sign">+</label>
+            </div>
+            
+            <!-- Bottoms Upload Box -->
+            <div class="upload-box">
+                <label for="bottoms-upload">Bottoms</label>
+                <input type="file" id="bottoms-upload" name="bottoms" accept="image/*">
+                <label for="bottoms-upload" class="plus-sign">+</label>
+            </div>
+            
+            <!-- Shoes Upload Box -->
+            <div class="upload-box">
+                <label for="shoes-upload">Shoes</label>
+                <input type="file" id="shoes-upload" name="shoes" accept="image/*">
+                <label for="shoes-upload" class="plus-sign">+</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
