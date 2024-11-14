@@ -1,3 +1,11 @@
+body {
+  background-image: url('../static/wardrobe_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,20 +17,25 @@
   align-items: center;
   justify-content: center;
   margin: 10px 0;
-  position: relative; /* Position relative to place the border above */
-  width: 100%; /* Ensure row spans the full width */
+  position: relative;
+  width: 100%;
 }
 
 .carousel {
   display: flex;
   overflow: hidden;
-  width: 370px;
-  background-color: #ddd;
+  width: 380px;
   padding: 10px;
+  background-image: url('../static/shelf.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
 }
 
 .carousel-track {
   display: flex;
+  align-items: center;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -45,11 +58,10 @@
   user-select: none;
 }
 
-/* Style for the middle item */
 .middle-item {
-    outline: 3px solid black; /* Black box */
+    outline: 3px solid black;
     outline-offset: -2px;
-    transform: scale(1.05); /* Slightly larger to emphasize */
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
